@@ -80,7 +80,7 @@ void worker(int grades[students][chapters * homeworks], int c, int h) {
 
     //outputs the average of each homework and chapter for the 10 students
     printf("Average grades for Homework %d in Chapter %d: %.2f\n", h + 1, c + 1, average);
-    exit(0); //exits the code
+    exit(0); 
 }
 
 // manager class
@@ -92,7 +92,7 @@ void manager(int grades[students][chapters * homeworks], int c) {
         }
         wait(NULL); // ends the process
     }
-    exit(0); // exits the process
+    exit(0);
 }
 
 // main class
