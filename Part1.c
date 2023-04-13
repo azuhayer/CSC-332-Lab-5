@@ -16,26 +16,33 @@ int main()
 
         // Remove the newline character from the end of the command string
         size_t command_length = strlen(command);
-        if (command[command_length - 1] == '\n') {
+        if (command[command_length - 1] == '\n') 
+        {
             command[command_length - 1] = '\0';
         }
 
-        if (strcmp(command, "exit") == 0) {
+        if (strcmp(command, "exit") == 0) 
+        {
             break;
         }
 
         // Fork a child process to execute the command
         pid_t pid = fork();
-        if (pid < 0) {
+        if (pid < 0) 
+        {
             perror("fork() failed");
             exit(EXIT_FAILURE);
-        } else if (pid == 0) {
+        } 
+        else if (pid == 0) 
+        {
             // Child process
             char* args[] = {"/bin/sh", "-c", command, NULL};
             execv(args[0], args);
             perror("execv() failed");
             exit(EXIT_FAILURE);
-        } else {
+        } 
+        else 
+        {
             // Parent process
             int status;
             waitpid(pid, &status, 0);
