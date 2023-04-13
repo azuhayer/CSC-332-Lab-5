@@ -9,17 +9,10 @@
 #include <sys/types.h>
 #include <string.h>
 
-// constant variable student
 const int students = 10;
-
-// constant variable Chapter which is also X
 const int chapters = 2;
-
-// constant variable Homework which is also Y
 const int homeworks = 2;
-
-// file name
-const char *file = "source.txt"; // change the file name if needed
+const char *file = "source.txt";
 
 // Director process
 void director(int grades[students][chapters * homeworks]) {
